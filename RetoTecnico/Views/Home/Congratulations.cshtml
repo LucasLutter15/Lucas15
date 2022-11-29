@@ -1,0 +1,17 @@
+﻿
+@{Layout = "_Layout";}
+@{
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Hecho!</h4>
+        <p>La nave fue creada con exito, pronto sera puesta en marcha.</p>
+        <hr>
+        <p class="mb-0">
+            Desea mandar otra nave al espacio?
+            @Html.ActionLink("Tripulada", "AltaNaveTrip", "Home")
+
+            @Html.ActionLink("No Tripulada", "AltaNaveNoTrip", "Home")
+
+            @Html.ActionLink("Lanzadera ", "AltaNaveLanz", "Home")
+        </p>
+    </div>
+}

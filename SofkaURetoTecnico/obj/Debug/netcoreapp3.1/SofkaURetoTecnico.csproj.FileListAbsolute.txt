@@ -1,0 +1,14 @@
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\bin\Debug\netcoreapp3.1\SofkaURetoTecnico.exe
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\bin\Debug\netcoreapp3.1\SofkaURetoTecnico.deps.json
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\bin\Debug\netcoreapp3.1\SofkaURetoTecnico.runtimeconfig.json
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\bin\Debug\netcoreapp3.1\SofkaURetoTecnico.runtimeconfig.dev.json
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\bin\Debug\netcoreapp3.1\SofkaURetoTecnico.dll
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\bin\Debug\netcoreapp3.1\SofkaURetoTecnico.pdb
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\obj\Debug\netcoreapp3.1\SofkaURetoTecnico.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\obj\Debug\netcoreapp3.1\SofkaURetoTecnico.AssemblyInfoInputs.cache
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\obj\Debug\netcoreapp3.1\SofkaURetoTecnico.AssemblyInfo.cs
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\obj\Debug\netcoreapp3.1\SofkaURetoTecnico.csproj.CoreCompileInputs.cache
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\obj\Debug\netcoreapp3.1\SofkaURetoTecnico.dll
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\obj\Debug\netcoreapp3.1\SofkaURetoTecnico.pdb
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\obj\Debug\netcoreapp3.1\SofkaURetoTecnico.genruntimeconfig.cache
+C:\Users\lucas\AppData\OneDrive\Escritorio\RetoTecnico\SofkaURetoTecnico\obj\Debug\netcoreapp3.1\SofkaURetoTecnico.csproj.AssemblyReference.cache

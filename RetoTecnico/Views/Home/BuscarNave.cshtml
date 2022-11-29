@@ -1,0 +1,55 @@
+﻿@using EntidadesCompartidas.Entidades;
+@model Nave
+@{Layout = "_Layout";}
+@{
+
+    @using (Html.BeginForm("BuscarNave", "Home", FormMethod.Post))
+    {
+        <div>
+            @Html.TextBox("Numero", "", new { @class = "form-control" })
+            <button type="submit">Buscar</button>
+        </div>
+
+    }
+
+    if (Model != null)
+    {
+        <table class="table-dark" summary="Naves" border="1">
+            <thead>
+                <tr>
+                    <th scope="col">Numero Nave</th>
+                    <th scope="col">Nombre de la nave</th>
+                    <th scope="col">Despegue</th>
+                    <th scope="col">Agencia</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Detalles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Numero KM/H</td>
+                    <td>@Model.Nombre</td>
+                    <td>@Model.FechaDespegue </td>
+                    <td>@Model.Firma.Nombre </td>
+                    @if (Model is Tripulada)
+                    {
+                        <td>Tripulada </td>
+                        <td>@Html.ActionLink("Ver", "Detalles", "Home", new { numero = Model.Numero })</td>
+                    }
+                    @if (Model is NoTripulada)
+                    {
+                        <td>No Tripulada </td>
+                        <td>@Html.ActionLink("Ver", "DetallesNT", "Home", new { numero = Model.Numero })</td>
+                    }
+                    @if (Model is VehiculoLanzadera)
+                    {
+                        <td>Vehiculo Lanzadera </td>
+                        <td>@Html.ActionLink("Ver", "DetallesV", "Home", new { numero = Model.Numero })</td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+
+    }
+
+}

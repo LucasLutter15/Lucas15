@@ -1,0 +1,30 @@
+﻿@using EntidadesCompartidas.Entidades;
+@model VehiculoLanzadera
+@{Layout = "_Layout";}
+@{
+    ViewData["Title"] = "Home Page";
+
+
+        <table class="table-dark" summary="Naves Lanzadas" border="1">
+            <thead>
+                <tr>
+                    <th scope="col">Velocidad</th>
+                    <th scope="col">Sistema de propulsion</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Empuje</th>
+                    <th scope="col">Transporte</th>
+                    <th scope="col">Codigo de Lanzador</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Velocidad KM/H</td>
+                    <td>@Model.SistemaDePropulsion</td>
+                    <td>@Model.Peso</td>
+                    <td>@Model.Empuje</td>
+                    <td>@Model.Transporte KG</td>
+                    <td>@Model.LanzadorDeEnergia.CodFabrica</td>
+                </tr>
+            </tbody>
+        </table>
+}

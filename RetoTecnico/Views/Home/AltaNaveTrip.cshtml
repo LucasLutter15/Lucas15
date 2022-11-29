@@ -1,0 +1,73 @@
+﻿@using EntidadesCompartidas.Entidades;
+@model Tripulada
+@{Layout = "_Layout";}
+@{
+
+    @using (Html.BeginForm("AltaNaveTrip", "Home", FormMethod.Post))
+    {
+        <div class="d-flex flex-column justify-content-center align-items-stretch col-12 col-md-2">
+            <label>Nombre</label>
+            @Html.TextBoxFor(N => N.Nombre)
+            @Html.ValidationMessageFor(N => N.Nombre, "", new { @class = "text-danger" })
+            <br />
+            <label>Objetivo</label>
+            @Html.TextBoxFor(N => N.Objetivo)
+
+            @Html.ValidationMessageFor(N => N.Objetivo, "", new { @class = "text-danger" })
+            <br />
+            <label>Agencia</label>
+            <div class="btn-group ">@Html.DropDownListFor(N => N.Firma.Nombre, ViewBag.ListAgencia as SelectList, new { @class = "form-control" })</div>
+            <br />
+            <label>Velocidad</label>
+            @Html.TextBoxFor(N => N.Velocidad)
+
+            @Html.ValidationMessageFor(N => N.Velocidad, "", new { @class = "text-danger" })
+            <br />
+            <label>Potencia</label>
+            @Html.TextBoxFor(N => N.Potencia)
+
+            @Html.ValidationMessageFor(N => N.Potencia, "", new { @class = "text-danger" })
+            <br />
+            <label>Combustible</label>
+            @Html.TextBoxFor(N => N.Combustible)
+
+            @Html.ValidationMessageFor(N => N.Combustible, "", new { @class = "text-danger" })
+            <br />
+            <label>Sistema De Propulsion</label>
+            @Html.TextBoxFor(N => N.SistemaDePropulsion)
+
+            @Html.ValidationMessageFor(N => N.SistemaDePropulsion, "", new { @class = "text-danger" })
+            <br />
+            <label>Peso</label>
+            @Html.TextBoxFor(N => N.Peso)
+
+            @Html.ValidationMessageFor(N => N.Peso, "", new { @class = "text-danger", @type = "number" })
+            <br />
+            <label>Mision</label>
+            @Html.TextBoxFor(N => N.Misiones)
+
+            @Html.ValidationMessageFor(N => N.Misiones, "", new { @class = "text-danger" })
+            <br />
+            <label>Capacidad</label>
+            @Html.TextBoxFor(N => N.Capacidad)
+
+            @Html.ValidationMessageFor(N => N.Capacidad, "", new { @class = "text-danger" })
+            <br />
+            <label>Personas a bordo</label>
+            @Html.TextBoxFor(N => N.PersonasABordo)
+
+            @Html.ValidationMessageFor(N => N.PersonasABordo, "", new { @class = "text-danger" })
+            <br />
+            <label>Orbita</label>
+            @Html.TextBoxFor(N => N.Orbita)
+
+            @Html.ValidationMessageFor(N => N.Orbita, "", new { @class = "text-danger" })
+            <br />
+            <label>@Html.ActionLink("Volver", "Index", "Home") </label>
+            <br />
+            <button type="submit" class="btn btn-success">Alta</button>
+        </div>
+        <br />
+        <img src="/css/NaveTripulada.jpg" class="img-fluid" alt="responsive image" />
+    }
+}

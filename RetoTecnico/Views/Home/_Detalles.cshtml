@@ -1,0 +1,32 @@
+﻿@using EntidadesCompartidas.Entidades;
+@model Tripulada
+@{Layout = "_Layout";}
+@{
+
+
+        <table class="table-dark" summary="Naves Lanzadas" border="1">
+            <thead>
+                <tr>
+                    <th scope="col">Velocidad</th>
+                    <th scope="col">Sistema de propulsion</th>
+                    <th scope="col">Peso</th>
+                    <th scope="col">Mision</th>
+                    <th scope="col">Astronautas</th>
+                    <th scope="col">Capacidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Velocidad KM/H</td>
+                    <td>@Model.SistemaDePropulsion</td>
+                    <td>@Model.Peso</td>
+                    <td>@Model.Misiones</td>
+                    <td>@Model.PersonasABordo</td>
+                    <td>@Model.Capacidad</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+}

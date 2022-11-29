@@ -1,0 +1,46 @@
+﻿@using EntidadesCompartidas.Entidades;
+@model List<Nave>
+@{Layout = "_Layout";}
+@{
+    ViewData["Title"] = "Home Page";
+
+    @using (Html.BeginForm("BuscarNavePlaneta", "Home", FormMethod.Post))
+    {
+
+        <div>
+            <div class="btn-group">@Html.DropDownList("Nombre", ViewBag.ListPlaneta as SelectList, new { @class = "form-control" })</div>
+            <br />
+            <button type="submit">Buscar</button>
+        </div>
+    }
+    if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <table class="table-dark" summary="Naves Lanzadas" border="1">
+                <thead>
+                    <tr>
+                        <th scope="col">Velocidad</th>
+                        <th scope="col">Sistema de propulsion</th>
+                        <th scope="col">Peso</th>
+                        <th scope="col">Empuje</th>
+                        <th scope="col">Se encuentra en actividad</th>
+                        <th scope="col">Codigo de motor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@item.Velocidad KM/H</td>
+                        <td>@item.SistemaDePropulsion</td>
+                        <td>@item.Peso</td>
+                        <td>@item.FechaDespegue </td>
+                        <td>@item.Firma.Nombre </td>
+                        <td>@Html.ActionLink("Ver", "DetallesNT", "Home", new { numero = item.Numero })</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        }
+    }
+
+}

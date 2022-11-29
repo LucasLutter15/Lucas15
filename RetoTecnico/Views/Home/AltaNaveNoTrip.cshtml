@@ -1,0 +1,69 @@
+﻿@using EntidadesCompartidas.Entidades;
+@model NoTripulada
+@{Layout = "_Layout";}
+@{
+
+
+    @using (Html.BeginForm("AltaNaveNoTrip", "Home", FormMethod.Post))
+    {
+
+<div class="d-flex flex-column justify-content-center align-items-stretch col-12 col-md-2">
+    <label>Nombre</label>
+    @Html.TextBoxFor(N => N.Nombre)
+    @Html.ValidationMessageFor(N => N.Nombre, "", new { @class = "text-danger" })
+    <br />
+    <label>Objetivo</label>
+    @Html.TextBoxFor(N => N.Objetivo)
+
+    @Html.ValidationMessageFor(N => N.Objetivo, "", new { @class = "text-danger" })
+    <br />
+    <label>Agencia</label>
+    <div class="btn-group">@Html.DropDownListFor(N => N.Firma.Nombre, ViewBag.ListAgencia as SelectList, new { @class = "form-control" })</div>
+    <br />
+    <label>Velocidad</label>
+    @Html.TextBoxFor(N => N.Velocidad)
+
+    @Html.ValidationMessageFor(N => N.Velocidad, "", new { @class = "text-danger" })
+    <br />
+    <label>Potencia</label>
+    @Html.TextBoxFor(N => N.Potencia)
+
+    @Html.ValidationMessageFor(N => N.Potencia, "", new { @class = "text-danger" })
+    <br />
+    <label>Empuje</label>
+    @Html.TextBoxFor(N => N.Empuje)
+
+    @Html.ValidationMessageFor(N => N.Empuje, "", new { @class = "text-danger" })
+    <br />
+    <label>Combustible</label>
+    @Html.TextBoxFor(N => N.Combustible)
+
+    @Html.ValidationMessageFor(N => N.Combustible, "", new { @class = "text-danger" })
+    <br />
+    <label>Sistema De Propulsion</label>
+    @Html.TextBoxFor(N => N.SistemaDePropulsion)
+
+    @Html.ValidationMessageFor(N => N.SistemaDePropulsion, "", new { @class = "text-danger" })
+    <br />
+    <label>Peso</label>
+    @Html.TextBoxFor(N => N.Peso)
+
+    @Html.ValidationMessageFor(N => N.Peso, "", new { @class = "text-danger" })
+    <br />
+    <label>Aterrizador</label>
+    @Html.TextBoxFor(N => N.Aterrizador)
+
+    @Html.ValidationMessageFor(N => N.Aterrizador, "", new { @class = "text-danger" })
+    <br />
+    <label>Codigo de Fabrica Motor</label>
+    @Html.DropDownListFor(N => N.TipoMotor.CodFabrica, ViewBag.ListMotor as SelectList, new { @class = "form-control" })
+    <br />
+    <label>Planeta</label>
+    <div class="btn-group">@Html.DropDownListFor(N => N.LugarDeEstudio.Nombre, ViewBag.ListPlaneta as SelectList, new { @class = "form-control" })</div>
+    <br />
+    <button type="submit" class="btn btn-success">Alta</button>
+</div>
+        <br />
+        <img src="/css/NaveNoTripuladaIMG.jpg" />
+    }
+}
