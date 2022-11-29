@@ -109,8 +109,36 @@ INSERT INTO Agencias(Nombre,Pais) Values ('CNES','Francia')
 Insert Into LanzadorDeEnergia(Codfabrica,Peso,Tamaño) Values('STV',2400000,60)
 Insert Into LanzadorDeEnergia(Codfabrica,Peso,Tamaño) Values('22U',1000000,40)
 Insert Into LanzadorDeEnergia(Codfabrica,Peso,Tamaño) Values('49A',2150000,45)
+GO
+/************************************************* Inventario Naves Default *************************************************/	
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Lanzar una carga','Pluton V','Queroseno',3000,4000,'Propulsion electromagnetica',Getdate(),2099,1) 
+Insert Into VehiculoLanzadera values(1,3000,200,'STV')
+
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Lanzar una carga','Pluton VI','Liquido',3000,4000,'Propulsion electromagnetica',Getdate(),2099,1) 
+Insert Into VehiculoLanzadera values(2,3000,200,'22U')
+
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Lanzar una carga','Pluton VII','Queroseno',3000,4000,'Propulsion electromagnetica',Getdate(),2099,1) 
+Insert Into VehiculoLanzadera values(3,3000,200,'STV')
 
 
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Evaluar el comportamiento humano','Trip V','Queroseno',3000,4000,'Propulsion electromagnetica',Getdate(),2099,3)
+Insert Into Tripulada values(4,'Apolo',8,'209',1,3)
+
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Evaluar el comportamiento humano','Trip VI','Queroseno',3000,4000,'Propulsion electromagnetica',Getdate(),2099,3)
+Insert Into Tripulada values(5,'Apolo',5,'209',1,2)
+
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Evaluar el comportamiento humano','Trip V','Queroseno',3000,4000,'Propulsion electromagnetica',Getdate(),2099,3)
+Insert Into Tripulada values(6,'Apolo',7,'209',1,3)
+
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Sacar foto a la atmosfera','Martus V','Queroseno',3000,4000,'Propulsion electromagnetica',Getdate(),2099,2)
+Insert Into NoTripulada values(7,290,1,1,200,'33D','Marte')
+
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Sacar foto a la atmosfera','Uranus V','Queroseno',3000,4000,'Propulsion electromagnetica',Getdate(),2099,2)
+Insert Into NoTripulada values(8,290,1,1,200,'99F','Urano')
+
+Insert Into Nave(firma,objetivo,nombre,Combustible,potencia,velocidad,SistemaDePropulsion,FechaDespegue,peso,tipo) values('Nasa','Sacar foto a la atmosfera','Uranus V','Queroseno',3000,4000,'Propulsion electromagnetica',Getdate(),2099,2)
+Insert Into NoTripulada values(9,290,1,1,200,'99F','Urano')
+GO
 /************************************************* Stored Procedures *************************************************/	
 CREATE PROCEDURE CrearNaveLanzadera
 @Firma varchar(30),
@@ -154,6 +182,7 @@ DECLARE @resultado INT
 EXEC @resultado=CrearNaveLanzadera 'Nasa','Lanzar una carga al espacio', 'Saturno V','Queroseno',3200,4000,'Propulsion Electromagnetica',2900,3500,118,'STV'
 SELECT @resultado
 GO
+
 ------------------------------------------------------------------------------------------------------------------
 CREATE PROCEDURE CrearNaveTripulada
 @Firma varchar(30),
@@ -197,6 +226,7 @@ GO
 DECLARE @resultado int
 exec @resultado=CrearNaveTripulada'FKA','Observar el comportamiento humano en el espacio','Spectrum','Nuclear',40000,23000,'Queroseno',2900,'Apolo',7,'290',3
 select @resultado
+GO
 ------------------------------------------------------------------------------------------------------------------
 CREATE PROCEDURE CrearNaveNoTripulada
 @Firma varchar(30),
@@ -243,7 +273,7 @@ GO
 DECLARE @resultado int
 exec @resultado=CrearNaveNoTripulada 'CMSA','Fotos a Planetas','Mart12','Nuclear',40000,23000,'Queroseno',2900,300,290,'33D','Urano'
 select @resultado
-
+GO
 ------------------------------------------------------------------------------------------------------------------
 CREATE proc CantidadDeNavesEnPlaneta
 @Planeta varchar(30)
